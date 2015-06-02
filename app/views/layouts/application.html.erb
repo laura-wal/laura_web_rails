@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LauraApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<nav class="<%= params[:action]%>">
+  <ul>
+    <li><%= link_to("THE STORY SO FAR", about_path)%></li><li><%= link_to("THE STUFF IVE DONE", done_path)%></li><li><%= link_to("THINGS I LIKE", like_path)%></li><li><%= link_to("REACH OUT", contact_path)%></li>
+  </ul>
+</nav>
+
+<%= yield %>
+
+</body>
+</html>
